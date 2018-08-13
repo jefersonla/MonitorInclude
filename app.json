@@ -1,0 +1,22 @@
+{
+  "name": "MonitorInclude",
+  "description": "Aplicação de controle de aulas dos laboratórios Include by CP - Bahia",
+  "keywords": [
+    "MEAN",
+    "Angular",
+    "Node",
+    "MongoDB",
+    "mLab"
+  ],
+  "repository": "https://github.com/chrisckchang/mean-contactlist-angular2",
+  "success_url": "/",
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+    "mongolab"
+  ]
+}
