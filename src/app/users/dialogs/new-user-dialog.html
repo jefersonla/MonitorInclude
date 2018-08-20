@@ -1,11 +1,41 @@
 <h1 mat-dialog-title>New User</h1>
 <div mat-dialog-content>
-  <p>What's your favorite animal?</p>
-  <mat-form-field>
-    <!--<input matInput [(ngModel)]="data.animal">-->
+  <mat-form-field class="input-dialog">
+    <input matInput
+           required
+           placeholder="Name"
+           [(ngModel)]="data.name">
+  </mat-form-field>
+
+  <mat-form-field class="input-dialog">
+    <input matInput
+           required
+           placeholder="Username"
+           [(ngModel)]="data.username">
+  </mat-form-field>
+
+  <mat-form-field class="input-dialog">
+    <input matInput
+           required
+           type="email"
+           placeholder="E-mail"
+           [(ngModel)]="data.email">
+  </mat-form-field>
+
+  <mat-form-field class="input-dialog">
+    <input matInput
+           type="url"
+           placeholder="Website"
+           [(ngModel)]="data.website">
+  </mat-form-field>
+
+  <mat-form-field class="input-dialog">
+    <input matInput
+           placeholder="Phone"
+           [(ngModel)]="data.phone">
   </mat-form-field>
 </div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <!--<button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>-->
+<div mat-dialog-actions style="align-items: right">
+  <button mat-raised-button color="accent" (click)="onNoClick()">No Thanks</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
 </div>

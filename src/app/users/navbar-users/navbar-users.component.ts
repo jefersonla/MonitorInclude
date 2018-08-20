@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { NewUserDialogComponent } from '../dialogs/new-user-dialog';
-import {User} from '../../../models/user.model';
+import { User } from '../../../models/user.model';
+import { DataService } from '../../data.service';
 
 @Component({
   selector: 'app-navbar-users',
@@ -10,7 +11,8 @@ import {User} from '../../../models/user.model';
 })
 export class NavbarUsersComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,
+              private dataSys: DataService) { }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(NewUserDialogComponent, {
@@ -18,9 +20,13 @@ export class NavbarUsersComponent implements OnInit {
       data: new User()
     });
 
+    dialogRef.beforeClose().subscribe(result => {
+      console.log(result);
+      return true;
+    });
+
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed => ', result);
-      // this.animal = result;
     });
   }
 

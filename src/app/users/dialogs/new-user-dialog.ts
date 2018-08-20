@@ -4,7 +4,8 @@ import { User } from '../../../models/user.model';
 
 @Component({
   selector: 'app-new-user-dialog',
-  templateUrl: './new-user-dialog.html',
+  styleUrls: ['./new-user-dialog.scss'],
+  templateUrl: './new-user-dialog.html'
 })
 export class NewUserDialogComponent {
 
