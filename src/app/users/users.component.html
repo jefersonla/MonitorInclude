@@ -1,8 +1,12 @@
+<!--<app-navbar-users></app-navbar-users>-->
+
 <h1> Users </h1>
+
+<app-navbar-users></app-navbar-users>
 
 <ul [@listStagger]="users$">
   <li *ngFor="let user of users$">
-    <a routerLink="/details/{{ user.id }}">{{ user.name }}</a>
+    <a routerLink="/details/{{ user._id }}">{{ user.name }}</a>
 
     <ul>
       <li>{{ user.email }}</li>

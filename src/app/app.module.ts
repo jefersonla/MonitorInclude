@@ -10,8 +10,17 @@ import { PostsComponent } from './posts/posts.component';
 import { DetailsComponent } from './details/details.component';
 import { UsersComponent } from './users/users.component';
 
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarUsersComponent } from './users/navbar-users/navbar-users.component';
+import { NewUserDialogComponent } from './users/dialogs/new-user-dialog';
 
 @NgModule({
   declarations: [
@@ -19,7 +28,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SidebarComponent,
     PostsComponent,
     DetailsComponent,
-    UsersComponent
+    UsersComponent,
+    NavbarUsersComponent,
+    NewUserDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -27,9 +38,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     FlexLayoutModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatFormFieldModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  entryComponents: [
+    NewUserDialogComponent
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

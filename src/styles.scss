@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "app-theme";
+//@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 
 body {
   margin: 0;
@@ -8,13 +11,32 @@ body {
   height: 100vh;
 }
 
+.mat-toolbar .app-name {
+  margin-left: 20px;
+}
+
+.header-navbar {
+  background-color: #2D2E2E !important;
+  position: fixed;
+  z-index: 1;
+}
+
+.button-row button {
+  margin: 0 15px 20px 0;
+}
+
 #container {
   display: grid;
   grid-template-columns: 70px auto;
   height: 100%;
 
   #content {
-    padding: 30px 50px;
+    @media (max-width: 600px) {
+      padding: 54px 50px 30px;
+    }
+    @media screen and (min-width: 600px) {
+      padding: 64px 50px 30px;
+    }
 
     ul {
       list-style-type: none;

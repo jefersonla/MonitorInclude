@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import {listStagger} from '../animations/basic.animations';
+import { User } from '../../models/user.model';
 
 @Component({
   selector: 'app-users',
@@ -12,7 +13,7 @@ import {listStagger} from '../animations/basic.animations';
 })
 export class UsersComponent implements OnInit {
 
-  users$: Object;
+  users$: Array<User>;
 
   constructor(private data: DataService) { }
 

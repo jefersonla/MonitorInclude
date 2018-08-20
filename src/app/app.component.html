@@ -1,9 +1,16 @@
-<div id="container">
-  <app-sidebar>
+<div>
+  <mat-toolbar class="header-navbar" color="primary">
+    <button mat-icon-button> <!-- (click)="snav.toggle()" -->
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="app-name">Monitor Include</h1>
+  </mat-toolbar>
 
-  </app-sidebar>
+  <div id="container">
+    <app-sidebar></app-sidebar>
 
-  <div id="content">
-    <router-outlet></router-outlet>
+    <div id="content">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>

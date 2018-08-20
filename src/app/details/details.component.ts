@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { ActivatedRoute } from '@angular/router';
 import { divFade } from '../animations/basic.animations';
+import {User} from '../../models/user.model';
 
 @Component({
   selector: 'app-details',
@@ -13,7 +14,7 @@ import { divFade } from '../animations/basic.animations';
 })
 export class DetailsComponent implements OnInit {
 
-  user$: Object;
+  user$: User;
 
   constructor(private data: DataService, private route: ActivatedRoute) {
     this.route.params.subscribe(params => this.user$ = params.id);

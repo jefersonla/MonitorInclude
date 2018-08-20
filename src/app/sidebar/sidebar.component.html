@@ -1,14 +1,17 @@
-<nav>
-  <ul>
+<mat-sidenav-container class="sidebar"
+                       [style.marginTop.px]="mobileQuery.matches ? 56 : 64">
+
+  <mat-sidenav opened="true" class="sidebar-list" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+               [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
     <li>
       <a routerLink="" [class.activated]="currentUrl == '/'">
-        <i class="material-icons">supervised_user_circle</i>
+        <i class="material-icons"> supervised_user_circle</i>
       </a>
     </li>
-    <li>
+    <!--<li>
       <a routerLink="posts" [class.activated]="currentUrl == '/posts'">
         <i class="material-icons">message</i>
       </a>
-    </li>
-  </ul>
-</nav>
+    </li>-->
+  </mat-sidenav>
+</mat-sidenav-container>

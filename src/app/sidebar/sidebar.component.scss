@@ -1,9 +1,9 @@
-nav {
-  background: #2D2E2E;
+.sidebar {
   height: 100%;
   position: fixed;
 
-  ul {
+  .sidebar-list {
+    background: #2D2E2E;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -12,7 +12,7 @@ nav {
 
       a {
         color: #fff;
-        padding: 20px;
+        padding: 20px 22px 20px;
         display: block;
       }
 
